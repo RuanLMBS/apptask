@@ -18,23 +18,13 @@ export function Task({ task }: { task: TaskProps }){
     }
 
     function handleTaskDone(taskToChange:TaskProps ) {
-  /*      const updatedTasks=tasks.filter((task)=>task.title!==taskToChange.title);
-        const newTask = {
-            id: taskToChange.id,
-            title: taskToChange.title,
-            description: taskToChange.description,
-            status: !taskToChange.status
-        } 
-        updatedTasks.push(newTask);*/
         const updatedTasks = tasks.map((t) => {
             if (t.title === taskToChange.title) {
-                console.log(`Mudando status da tarefa: ${t.title} de ${t.status} para ${!t.status}`);
-                return { ...t, status: !t.status }; // Inverte o status
+                return { ...t, status: !t.status }; 
             }
-            return t; // Retorna a tarefa sem alterações
+            return t; 
         });
         setTasks(updatedTasks);
-        console.log(tasks);
     }
     return(
         <Container>
@@ -44,7 +34,7 @@ export function Task({ task }: { task: TaskProps }){
                 {task.status && <Feather name="check-circle" size={24} color="white"></Feather>}
               </TaskDone>
               <TaskOptions onPress={handlePress}>
-                  <Feather name="more-vertical" size={24} color="#000000"></Feather>
+                  <Feather name="more-vertical" size={24} color="white"></Feather>
               </TaskOptions>
         </Container>
     );

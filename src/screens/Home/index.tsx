@@ -4,15 +4,11 @@ import { InputSearchTask } from '../../components/InputSearchTask';
 import { Footer } from '../../components/Footer';
 import { useContext, useEffect, useState } from 'react';
 import { TaskContext } from '../../context/TaskContext';
-//import { InputDescription } from './src/components/InputDescription';
 
 export default function Home() {
 
   const { tasks } = useContext(TaskContext);
-  //  const [tasks, setTasks] = useState<{description: string; check:boolean}[]>([]); //Lista de tarefas fica aqui
-  const [taskText, setTaskText] = useState("");
 
-  //abaixo é o que será renderizado
   return (
     <View style={styles.container}>
       <InputSearchTask />
@@ -31,7 +27,7 @@ export default function Home() {
         )}
         ListEmptyComponent={() => (
           <View>
-            <Text>Nenhuma tarefa cadastrada!</Text>
+            <Text style={styles.emptyText}>Nenhuma tarefa casdastrada!</Text>
           </View>
         )
         }
@@ -40,7 +36,6 @@ export default function Home() {
       <Footer />
     </View>
   );
-  //acima é o que será renderizado
 }
 
 const styles = StyleSheet.create({
@@ -49,9 +44,12 @@ const styles = StyleSheet.create({
     backgroundColor: '#252422',
     alignItems: 'center',
     justifyContent: 'flex-start',
-    // padding: 16,
     paddingTop: 64,
     gap: 16,
   },
+  emptyText: {
+    fontWeight:'bold',
+    color:'white'
+  }
 });
 

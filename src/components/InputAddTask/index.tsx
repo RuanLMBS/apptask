@@ -11,7 +11,7 @@ export function InputAddTask({ onPress, onChangeText, value }: Props) {
     return (
         <Container>
             <ContainerHeader>
-                <Text style={{ color: '#fffcf2a' }}>
+                <Text style={{ color: 'white' }}>
                     Título
                 </Text>
             </ContainerHeader>

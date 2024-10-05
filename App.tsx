@@ -1,4 +1,3 @@
-import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, View } from 'react-native';
 import * as React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
@@ -9,13 +8,9 @@ import AddTask from './src/screens/AddTask'
 import TaskProvider from './src/context/TaskContext';
 import Details from './src/screens/Details';
 
-//import { InputDescription } from './src/components/InputDescription';
-
 export default function App() {
   
-//  const [tasks, setTasks] = useState<{description: string; check:boolean}[]>([]); //Lista de tarefas fica aqui
-//  const [taskText, setTaskText] = useState("");
-  //abaixo é o que será renderizado
+
   
   const Stack = createNativeStackNavigator();
   return (
@@ -29,7 +24,6 @@ export default function App() {
       </NavigationContainer>
     </TaskProvider>
   );
-  //acima é o que será renderizado
 }
 
 const styles = StyleSheet.create({
