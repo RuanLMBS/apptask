@@ -1,15 +1,17 @@
 import styled from 'styled-components/native';
 
 export const Container = styled.View`
+    box-model: border-box;    
     position:absolute;
     bottom:0;
     flexDirection: row;
     justifyContent: space-between;
     alignItems: center;
-    backgroundColor: #EDEDED;
+    backgroundColor:#403d39 ;
     padding:20px;
     borderTopWidth:0.5px;
     borderTopColor:#000000;
+    width: 100%;
 `;
 
 export const IconContainer = styled.TouchableOpacity`
@@ -24,7 +26,7 @@ export const AddButton = styled.TouchableOpacity`
     width: 100px;
     height: 100px;
     borderRadius: 50px;
-    backgroundColor: #EDEDED;
+    backgroundColor: #eb5e28;
     justifyContent: center;
     alignItems: center;
     borderWidth: 1px;

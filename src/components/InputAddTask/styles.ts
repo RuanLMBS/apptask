@@ -6,10 +6,10 @@ export const Container = styled.View`
     height: 80px;
     justify-content: space-between;
     flex-direction: row;
-    background-color: #D9D9D9;
+    background-color: transparent;
     overflow: hidden;
     borderBottomWidth:1px;
-    borderBottomColor:black;
+    borderBottomColor: #eb5e28;
     float:right;
 `;
 
@@ -26,6 +26,7 @@ export const InputTitle = styled.TextInput`
     width:100%;
     height:60%;
     padding: 5px;
+    color: #fffcf2;
 `;
 
 export const ContainerBottom = styled.View`

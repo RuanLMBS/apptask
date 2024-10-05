@@ -2,11 +2,11 @@ import styled from 'styled-components/native';
 
 export const Container = styled.View`
     display:flex;
-    width: 100%;
+    width: 90%;
     height: 56px;
     justify-content: space-between;
     flex-direction: row;
-    background-color: #D9D9D9;
+    background-color: #403d39;
     border-radius: 28px;
     overflow: hidden;
 `;
@@ -14,7 +14,7 @@ export const Container = styled.View`
 export const Input = styled.TextInput`
     flex: 1;
     padding:15px;
-    color:black;
+    color:#ccc5b9;
 `
 
 export const InputButton = styled.TouchableOpacity`

@@ -4,37 +4,37 @@ import { Container } from './styles';
 import { Footer } from '../../components/Footer';
 import { useContext, useState } from 'react';
 import { TaskContext } from '../../context/TaskContext';
-import { ButtonContainer,CancelButton,AddButton,AddButtonText,ButtonText } from './styles';
+import { ButtonContainer, CancelButton, AddButton, AddButtonText, ButtonText } from './styles';
 import { Alert, View, StyleSheet } from 'react-native';
 
 /*
 type Props = NativeStackScreenProps<RootStackParamList>;
 const navigation = useNavigation<Props['navigation']>();
 */
-export default function AddTask({route}:any) {
+export default function AddTask({ route }: any) {
     const [taskText, setTaskText] = useState('');
     const [taskDescription, setTaskDescription] = useState('');
-    const {task, tasks, createTask} = useContext(TaskContext);
+    const { task, tasks, createTask } = useContext(TaskContext);
     function handleTaskAdd() {
-        if(taskText==""){
-            return Alert.alert("Erro","Tarefa está sem título!");
+        if (taskText == "") {
+            return Alert.alert("Erro", "Tarefa está sem título!");
         }
 
-        if(taskDescription == "") {
-            return Alert.alert("Erro","Tarefa sem descrição!")
+        if (taskDescription == "") {
+            return Alert.alert("Erro", "Tarefa sem descrição!")
         }
-    
-        if(tasks.some((task)=> task.title === taskText)) {
+
+        if (tasks.some((task) => task.title === taskText)) {
             return Alert.alert("Erro", "Tarefa já existe!")
         }
-    
+
         createTask(taskText, taskDescription);
-        setTaskText(''); 
+        setTaskText('');
         setTaskDescription('');
     }
-    return(
-    <View style={styles.container}>
-        <Container>
+    return (
+        <View style={styles.container}>
+            <Container>
                 <InputAddTask
                     onPress={handleTaskAdd}
                     onChangeText={setTaskText}
@@ -54,18 +54,18 @@ export default function AddTask({route}:any) {
                     </AddButton>
                 </ButtonContainer>
             </Container>
-        <Footer/>
-    </View>
+            <Footer />
+        </View>
     );
-}   
+}
 
 const styles = StyleSheet.create({
     container: {
-      flex: 1,
-      backgroundColor: '#fff',
-      justifyContent: 'flex-start',
-      paddingTop: 64,
-      gap: 16,
+        flex: 1,
+        backgroundColor: '#252422',
+        justifyContent: 'flex-start',
+        paddingTop: 64,
+        gap: 16,
     },
-  
-  });
+
+});

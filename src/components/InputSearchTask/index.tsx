@@ -1,15 +1,16 @@
-import {Feather} from '@expo/vector-icons'
+import { Feather } from '@expo/vector-icons'
 import { Container, Input, InputButton } from './styles';
 
 export function InputSearchTask() {
-    return(
+    return (
         <Container>
             <Input
                 placeholder='Pesquise uma tarefa aqui'
+                placeholderTextColor='#ccc5b9'
                 keyboardType='default'
             />
-            <InputButton>            
-                <Feather name='search' size={24} color="#000000"/>
+            <InputButton>
+                <Feather name='search' size={23} color="#000000" />
             </InputButton>
         </Container>
     );

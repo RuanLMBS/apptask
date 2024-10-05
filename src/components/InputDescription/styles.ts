@@ -10,4 +10,5 @@ export const DescriptionInput = styled.TextInput`
   margin-bottom: 20px;
   border-radius: 8px;
   font-size: 16px;
+  color: #fffcf2
 `;

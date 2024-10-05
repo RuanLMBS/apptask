@@ -1,18 +1,23 @@
 import { Container, ContainerHeader, ContainerBottom, InputTitle } from './styles'
 import { Text } from 'react-native';
-import {Feather} from '@expo/vector-icons'
+import { Feather } from '@expo/vector-icons'
 
 type Props = {
-    onPress: ()=>void;
-    onChangeText:(text:string) => void;
+    onPress: () => void;
+    onChangeText: (text: string) => void;
     value: string;
 }
-export function InputAddTask({onPress, onChangeText, value} : Props) {
-    return(
+export function InputAddTask({ onPress, onChangeText, value }: Props) {
+    return (
         <Container>
-            <ContainerHeader><Text>Título</Text></ContainerHeader>
+            <ContainerHeader>
+                <Text style={{ color: '#fffcf2a' }}>
+                    Título
+                </Text>
+            </ContainerHeader>
             <InputTitle
-                placeholder='Input'
+                placeholder='Escreva aqui o nome da tarefa'
+                placeholderTextColor={'#ccc5b9'}
                 keyboardType='default'
                 value={value}
                 onChangeText={onChangeText}
