@@ -5,9 +5,10 @@ import { Feather } from '@expo/vector-icons'
 type Props = {
     onPress: () => void;
     onChangeText: (text: string) => void;
+    onBlur:(e:any)=>void;
     value: string;
 }
-export function InputAddTask({ onPress, onChangeText, value }: Props) {
+export function InputAddTask({ onPress, onChangeText, onBlur, value }: Props) {
     return (
         <Container>
             <ContainerHeader>
@@ -21,6 +22,7 @@ export function InputAddTask({ onPress, onChangeText, value }: Props) {
                 keyboardType='default'
                 value={value}
                 onChangeText={onChangeText}
+                onBlur={onBlur}
             />
         </Container>
     );

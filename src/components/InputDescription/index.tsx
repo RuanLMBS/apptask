@@ -3,10 +3,11 @@ import { DescriptionInput } from './styles'
 type Props = {
     onPress: () => void;
     onChangeText: (text: string) => void;
+    onBlur:(e:any)=>void;
     value: string;
 }
 
-export function InputDescription({ onPress, onChangeText, value }: Props) {
+export function InputDescription({ onPress, onChangeText,onBlur, value }: Props) {
     return (
         <DescriptionInput
             placeholder='Descrição'
@@ -14,6 +15,7 @@ export function InputDescription({ onPress, onChangeText, value }: Props) {
             keyboardType='default'
             value={value}
             onChangeText={onChangeText}
+            onBlur={onBlur}
         />
     );
 }
